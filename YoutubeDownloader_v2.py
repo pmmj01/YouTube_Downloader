@@ -4,7 +4,6 @@ import time
 import sys
 import json
 from datetime import datetime
-from translations import *
 
 current_user_directory = os.path.expanduser("~")
 current_user = os.path.basename(current_user_directory)
@@ -56,10 +55,16 @@ def progress(stream, chunk, bytes_remaining):
     
     speed_list.append(live_speed)
     
-    sys.stdout.write(f"\r{translate_file['1a']} {live_progress:.2f}% - ({live_MB_downloaded:.3f} MB / {file_size:.3f} MB). {translate_file['1b']}{real_speed:.2f} {speed_unit}")
+    if stream.resolution != None:
+        current_quality = (f" {translate_file['1c']}{stream.resolution}")
+    else:
+        current_quality = ""
+    
+    sys.stdout.write(f"\r{translate_file['1a']} {live_progress:.2f}% - ({live_MB_downloaded:.3f} MB / {file_size:.3f} MB){current_quality}. {translate_file['1b']}{real_speed:.2f} {speed_unit}     ")
     sys.stdout.flush()
     
     start_time = end_time
+
 
 def user_choice():
     while True:
@@ -92,24 +97,37 @@ def user_choice():
         
     return format_choice, yt
 
+
 def save_data_to_file(title, weight, speed, output_path):
     current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     data = f"| {current_datetime} | {title} | {weight:.2f} MB | {speed:.2f} KB/s | {output_path}\n"
     
     file_exists = os.path.exists("download_data.txt")
     
-    with open('download_data.txt', 'a' if file_exists else 'w') as file:
+    with open('download_data.txt', 'a' if file_exists else 'w', encoding='utf-8') as file:
         if not file_exists:
             file.write("|   Data i godzina    |                 Tytuł                  |    Waga    |   Prędkość    |\n")
         file.write(data)
-    
+
+
 def download_video(format_choice, yt, output_path=None):
     try:
         global start_time
         start_time = time.time()
         
         if format_choice in ["mp4", "4"]:
-            video = yt.streams.filter(progressive=True, file_extension="mp4").order_by('resolution').desc().first()
+            quality_levels = ['2160p', '1440p', '1080p', '720p', '480p', '360p', '240p', '144p']
+
+            for quality in quality_levels:
+                video = yt.streams.filter(file_extension="mp4", progressive=True, resolution=quality).first()
+                if video:
+                    break
+
+            if not video:
+                print(f"\033[91m{translate_file['11a']}\033[0m")
+            else:
+                print(f"\033[96m{translate_file['11b']}\033[0m\033[92m{video.resolution}\033[0m")
+            
         elif format_choice in ["mp3", "3"]:
             video = yt.streams.filter(only_audio=True).first()
 
@@ -148,11 +166,12 @@ def download_video(format_choice, yt, output_path=None):
     except Exception as e:
         print(f"\n\033[91m{translate_file['10a']}{e}\033[0m\n")
         response = input(f"\033[96m{translate_file['6b']}\033[0m\n")
-        if response.lower() != 'tak' or response.lower() != 't' or response.lower() != 'yes' or response.lower() != 'y':
+        if response.lower() not in ['tak', 't', 'yes', 'y']:
             exit()
-
+            
 
 if __name__ == "__main__":
+    print("YT_Downloader ver.1.3")
     while True:
         format_choice, yt = user_choice()
         download_video(format_choice, yt, output_path=f"C:\\Users\\{current_user}\\Downloads")

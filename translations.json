@@ -1,41 +1,48 @@
 {
     "polish" : {
-        "1a":"Pobrano: ",
-        "1b":"Prędkość pobierania: ",
-        "2a":"Wybierz format 'mp4', '4' lub 'mp3', '3'",
-        "string_to_exit":"Aby wyjść wpisz 'exit'",
-        "3a":"Został wybrany format: ",
-        "4a":"Nieprawidłowy wybór!",
-        "5a":"Wprowadź link do filmu",
-        "6a":"Błąd: Niepoprawny link YouTube!",
-        "6b":"Czy chcesz kontynuować? ('tak' lub 't' / 'nie' lub 'n'): ",
-        "7a":"Nieprawidłowy link YouTube!",
-        "8a":"Film został pobrany prawidłowo i zapisany w lokalizacji: ",
-        "9a":"Średnia prędkość pobierania: ",
-        "9b":"Najszybsza prędkość pobierania: ",
-        "9c":"Najniższa prędkość pobierania: ",
-        "10a":"Wystąpił błąd: "
+        "1a": "Pobrano: ",
+        "1b": "Prędkość pobierania: ",
+        "1c": "Rozdzielczość: ",
+        "2a": "Wybierz format 'mp4', '4' lub 'mp3', '3'",
+        "string_to_exit": "Aby wyjść wpisz 'exit'",
+        "3a": "Został wybrany format: ",
+        "4a": "Nieprawidłowy wybór!",
+        "5a": "Wprowadź link do filmu",
+        "6a": "Błąd: Niepoprawny link YouTube!",
+        "6b": "Czy chcesz kontynuować? ('tak' lub 't' / 'nie' lub 'n'): ",
+        "7a": "Nieprawidłowy link YouTube!",
+        "8a": "Film został pobrany prawidłowo i zapisany w lokalizacji: ",
+        "9a": "Średnia prędkość pobierania: ",
+        "9b": "Najszybsza prędkość pobierania: ",
+        "9c": "Najniższa prędkość pobierania: ",
+        "10a": "Wystąpił błąd: ",
+        "11a": "Nie znaleziono dostępnego strumienia wideo o żądanej jakości",
+        "11b": "Znaleziono strumień wideo o jakości: "
     },
     "english" : {
-        "1a":"Downloaded: ",
-        "1b":"Download speed: ",
-        "2a":"Select format 'mp4', '4' or 'mp3', '3'",
-        "string_to_exit":"To exit type 'exit'",
-        "3a":"Chosen format: ",
-        "4a":"Invalid selection!",
-        "5a":"Enter video link",
-        "6a":"Error: Invalid YouTube link!",
-        "6b":"Do you want to continue? ('yes' or 'y' / 'no' or 'n'): ",
-        "7a":"Invalid YouTube link!",
-        "8a":"Video has been downloaded successfully and saved at: ",
-        "9a":"Average download speed: ",
-        "9b":"Fastest download speed: ",
-        "9c":"Slowest download speed: ",
-        "10a":"An error occurred: "
+        "1a": "Downloaded: ",
+        "1b": "Download speed: ",
+        "1c": "Resolution: ",
+        "2a": "Select format 'mp4', '4' or 'mp3', '3'",
+        "string_to_exit": "To exit type 'exit'",
+        "3a": "Chosen format: ",
+        "4a": "Invalid selection!",
+        "5a": "Enter video link",
+        "6a": "Error: Invalid YouTube link!",
+        "6b": "Do you want to continue? ('yes' or 'y' / 'no' or 'n'): ",
+        "7a": "Invalid YouTube link!",
+        "8a": "Video has been downloaded successfully and saved at: ",
+        "9a": "Average download speed: ",
+        "9b": "Fastest download speed: ",
+        "9c": "Slowest download speed: ",
+        "10a":"An error occurred: ",
+        "11a": "No available video stream found with the requested quality",
+        "11b": "Found a video stream with quality: "
     },
     "spanish" : {
         "1a": "Descargado: ",
         "1b": "Velocidad de descarga: ",
+        "1c": "Resolución: ",
         "2a": "Selecciona el formato 'mp4', '4' o 'mp3', '3'",
         "string_to_exit": "Para salir escribe 'exit'",
         "3a": "Formato elegido: ",
@@ -48,11 +55,14 @@
         "9a": "Velocidad de descarga promedio: ",
         "9b": "Velocidad de descarga más rápida: ",
         "9c": "Velocidad de descarga más lenta: ",
-        "10a": "Se produjo un error: "
+        "10a": "Se produjo un error: ",
+        "11a": "No se encontró un flujo de video disponible con la calidad solicitada",
+        "11b": "Se encontró un flujo de video con calidad: "
     },
     "chinese" : {
         "1a": "下载完成：",
         "1b": "下载速度：",
+        "1c":"分辨率：",
         "2a": "选择格式 'mp4'、'4' 或 'mp3'、'3'",
         "string_to_exit": "要退出，请键入 'exit'",
         "3a": "选择的格式：",
@@ -65,11 +75,14 @@
         "9a": "平均下载速度：",
         "9b": "最快下载速度：",
         "9c": "最慢下载速度：",
-        "10a": "发生了错误："
+        "10a": "发生了错误：",
+        "11a": "未找到具有所请求质量的可用视频流",
+        "11b": "找到了质量为的视频流："
     },
     "arabic" : {
         "1a": "تم التنزيل: ",
         "1b": "سرعة التنزيل: ",
+        "1c": "الدقة: ",
         "2a": "حدد التنسيق 'mp4' ، '4' أو 'mp3' ، '3'",
         "string_to_exit": "للخروج اكتب 'exit'",
         "3a": "التنسيق المختار: ",
@@ -82,11 +95,14 @@
         "9a": "متوسط سرعة التنزيل: ",
         "9b": "أسرع سرعة تنزيل: ",
         "9c": "أبطأ سرعة تنزيل: ",
-        "10a": "حدث خطأ: "
+        "10a": "حدث خطأ: ",
+        "11a": "لم يتم العثور على تيار فيديو متاح بالجودة المطلوبة",
+        "11b": "تم العثور على تيار فيديو بجودة:"
     },
     "italian" : {
         "1a": "Scaricato: ",
         "1b": "Velocità di download: ",
+        "1c": "Risoluzione: ",
         "2a": "Seleziona il formato 'mp4', '4' o 'mp3', '3'",
         "string_to_exit": "Per uscire digita 'exit'",
         "3a": "Formato scelto: ",
@@ -99,11 +115,14 @@
         "9a": "Velocità di download media: ",
         "9b": "Velocità di download più veloce: ",
         "9c": "Velocità di download più lenta: ",
-        "10a": "Si è verificato un errore: "
+        "10a": "Si è verificato un errore: ",
+        "11a": "Nessun flusso video disponibile trovato con la qualità richiesta",
+        "11b": "Trovato uno streaming video con qualità: "
     },
     "french" : {
         "1a": "Téléchargé: ",
         "1b": "Vitesse de téléchargement: ",
+        "1c": "Résolution: ",
         "2a": "Sélectionnez le format 'mp4', '4' ou 'mp3', '3'",
         "string_to_exit": "Pour quitter, tapez 'exit'",
         "3a": "Format choisi: ",
@@ -116,6 +135,8 @@
         "9a": "Vitesse de téléchargement moyenne: ",
         "9b": "Vitesse de téléchargement la plus rapide: ",
         "9c": "Vitesse de téléchargement la plus lente: ",
-        "10a": "Une erreur s'est produite: "
+        "10a": "Une erreur s'est produite: ",
+        "11a": "Aucun flux vidéo disponible trouvé avec la qualité demandée",
+        "11b": "Un flux vidéo avec la qualité a été trouvé: "
     }
 }
